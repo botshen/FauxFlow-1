@@ -1,6 +1,6 @@
 # fauxflow
 
-> a chrome extension tools built with Vite + React, and Manifest v3
+> Our Chrome extension offers a sleek and effective mock plugin for web developers looking to streamline their testing process. With our tool, you can easily mock API responses and customize your test environment to fit your needs. Whether you're a beginner or a seasoned developer, our plugin offers an intuitive interface and robust functionality to ensure your tests are accurate and reliable. Try it out today and experience the benefits of a simple yet powerful mock plugin for Chrome!
 
 ## Installing
 
