@@ -1,17 +1,23 @@
 import { styled } from '@linaria/react'
+import { NextUIProvider } from '@nextui-org/react'
 import { ProjectsList } from '../pages/projectsList'
 
 const Container = styled.div`
   border: 1px solid purple;
   width: 800px;
   height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 `
 function App() {
   return (
-    <Container>
-      <h3>项目列表</h3>
-      <ProjectsList />
-    </Container>
+    <NextUIProvider>
+      <Container>
+        <ProjectsList />
+      </Container>
+    </NextUIProvider>
   )
 }
 
