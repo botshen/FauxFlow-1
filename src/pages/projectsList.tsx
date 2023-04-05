@@ -1,9 +1,11 @@
 import { useState } from 'react'
+import { ProjectDetail } from './ProjectDetail'
+import s from './ProjectsList.module.scss'
 interface Project {
   id: string
   name: string
 }
-export function ProjectsList() {
+export const ProjectsList: React.FC = () => {
   const [projects, setProjects] = useState<Project[]>([
     {
       id: '1',
@@ -22,14 +24,15 @@ export function ProjectsList() {
     <>
 
       {!projectVisible
-        ? <>
-          <h3>项目列表</h3><ul>
+        ? <div className={s.wrapper}>
+          <h3>项目列表</h3>
+          <ul>
             {projects.map(project => (
               <li key={project.id} onClick={xxx}>{project.name}</li>
             ))}
           </ul>
-        </>
-        : <span>详情页面</span>}
+        </div>
+        : <ProjectDetail />}
     </>
   )
 }

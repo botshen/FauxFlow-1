@@ -1,0 +1,39 @@
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: #4b9ae9;
+  display: flex;
+  flex-direction: row;
+
+  >.apiList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35vw;
+    height: 100vh;
+    background-color: red;
+    padding: 20px;
+    box-sizing: border-box;
+
+    li {
+      cursor: pointer;
+    }
+  }
+
+  >.apiDetail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 65vw;
+    height: 100vh;
+    background-color: #66dc79;
+    padding: 20px;
+    box-sizing: border-box;
+
+    li {
+      cursor: pointer;
+    }
+  }
+}
