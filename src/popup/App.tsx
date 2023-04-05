@@ -4,12 +4,11 @@ import { ProjectsList } from '../pages/projectsList'
 
 const Container = styled.div`
   border: 1px solid purple;
-  width: 800px;
-  height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height:100vh;
 `
 function App() {
   return (
