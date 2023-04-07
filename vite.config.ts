@@ -18,7 +18,7 @@ export default defineConfig(({ mode }) => {
         },
       },
     },
-
+    server: { port: 3000, hmr: { port: 3000 } },
     plugins: [crx({ manifest }), react()],
   }
 })

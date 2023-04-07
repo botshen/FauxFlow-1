@@ -12,8 +12,8 @@ export default defineManifest({
     128: 'img/logo-128.png',
   },
   action: {
-    // default_popup: 'popup.html',
-    // default_icon: 'img/logo-48.png',
+    default_popup: 'popup.html',
+    default_icon: 'img/logo-48.png',
   },
   options_page: 'options.html',
   background: {
@@ -22,15 +22,30 @@ export default defineManifest({
   },
   content_scripts: [
     {
-      matches: ['http://*/*', 'https://*/*'],
+      all_frames: true,
+      run_at: 'document_start',
       js: ['src/content/index.ts'],
+      matches: [
+        '<all_urls>',
+      ],
     },
   ],
   web_accessible_resources: [
     {
       resources: ['img/logo-16.png', 'img/logo-34.png', 'img/logo-48.png', 'img/logo-128.png'],
-      matches: [],
+      matches: ['http://*/*', 'https://*/*'],
     },
   ],
-  permissions: [],
+
+  permissions: [
+    'storage',
+    'tabs',
+    'webRequest',
+    'activeTab',
+    'unlimitedStorage',
+  ],
+  host_permissions: [
+    '<all_urls>',
+  ],
+
 })
